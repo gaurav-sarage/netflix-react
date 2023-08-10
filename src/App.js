@@ -1,13 +1,42 @@
 import logo from './logo.svg';
 import './App.css';
-import Counter from './Counter';
+import Row from './Row'
+import requests from './requests';
 
 function App() {
   return (
     <div className="App">
 
-      {/* <Counter /> */}
-      Welcome folks!
+      We will rock the app
+
+      <Row
+        title="NETFLIX ORIGINALS"
+        fetchUrl={requests.fetchNetflixOriginals} 
+      />
+      <Row 
+        title="Trending"
+        fetchUrl={requests.fetchTrending}
+      />
+      <Row
+        title="Action Movies"
+        fetchUrl={requests.fetchActionMovies}
+      />
+      <Row
+        title="Comedy Movies"
+        fetchUrl={requests.fetchComedyMovies}
+      />
+      <Row
+        title="Documentaries"
+        fetchUrl={requests.fetchDocumentaries}
+      />
+      <Row
+        title="Horror Movies"
+        fetchUrl={requests.fetchHorrorMovies}
+      />
+      <Row
+        title="Romantic Movies"
+        fetchUrl={requests.fetchRomanceMovies}
+      />
     </div>
   );
 }
